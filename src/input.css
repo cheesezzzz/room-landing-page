@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@layer components {
+  .loader {
+    @apply w-full h-screen fixed top-0 left-0 ease-in-out transform transition-transform duration-1000;
+  }
+  .is-hidden {
+    @apply -translate-y-full delay-200;
+  }
+
+  .loader__panel {
+    @apply bg-black w-full h-screen absolute top-0 left-0 ease-in-out transform transition-transform duration-1000 flex justify-center items-center;
+  }
+
+  .open .hamburger {
+    background-color: transparent;
+  }
+
+  .open .hamburger-0 .hamburger-2 {
+    transform: translateY(0);
+  }
+
+  .open .hamburger-0 {
+    transform: rotate(-45deg);
+    background-color: gainsboro;
+  }
+
+  .open .hamburger-2 {
+    transform: rotate(45deg);
+    background-color: gainsboro;
+  }
+
+  .overlay {
+    @apply absolute bg-transparent blur-sm top-0 left-0 bottom-0 right-0
+  }
+}
+
